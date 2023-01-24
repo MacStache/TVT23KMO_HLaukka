@@ -1,0 +1,11 @@
+# ninja log v5
+1	50	6955894740472222	CMakeFiles/QT_karkit.dir/main.c.obj	2455643e4fe16d9f
+51	130	6955894741241630	QT_karkit.exe	a90a601286ab9a1d
+1	50	6955896058882336	CMakeFiles/QT_karkit.dir/main.c.obj	2455643e4fe16d9f
+51	124	6955896059578630	QT_karkit.exe	a90a601286ab9a1d
+2	52	6955896902985532	CMakeFiles/QT_karkit.dir/main.c.obj	2455643e4fe16d9f
+52	127	6955896903706608	QT_karkit.exe	a90a601286ab9a1d
+1	51	6955898307115867	CMakeFiles/QT_karkit.dir/main.c.obj	2455643e4fe16d9f
+52	130	6955898307864105	QT_karkit.exe	a90a601286ab9a1d
+2	60	6955939362717575	CMakeFiles/QT_karkit.dir/main.c.obj	2455643e4fe16d9f
+60	156	6955939363645551	QT_karkit.exe	a90a601286ab9a1d

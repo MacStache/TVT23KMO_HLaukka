@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(QT_matematiikka LANGUAGES C)
+
+add_executable(QT_matematiikka main.c)
+
+install(TARGETS QT_matematiikka
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
