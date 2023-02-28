@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/QT_Valikko.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Valikko/build/CMakeFiles/install/strip.dir
