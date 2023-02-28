@@ -1,0 +1,7 @@
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/QT_Structs.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/edit_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/rebuild_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/list_install_components.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/install.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/install/local.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Structs/build/CMakeFiles/install/strip.dir

@@ -1,0 +1,5 @@
+Matti, Mainio, Oulu, 28
+Jussi, Jonio, Turku, 32
+Liisa, Joki, Tampere, 24
+Aino, Virta, Oulu, 23
+Liisa, Joki, Tamprere, 28

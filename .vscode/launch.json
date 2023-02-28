@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "cwd": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_NimiTiedostoon",
+      "program": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_NimiTiedostoon/build/Debug/outDebug"
+    }
+  ]
+}

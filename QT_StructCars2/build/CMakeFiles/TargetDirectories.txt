@@ -1,0 +1,7 @@
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/QT_StructCars2.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/edit_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/rebuild_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/list_install_components.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/install.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/install/local.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_StructCars2/build/CMakeFiles/install/strip.dir
