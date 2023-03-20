@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "console": "externalTerminal",
-      "cwd": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_NimiTiedostoon",
-      "program": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_NimiTiedostoon/build/Debug/outDebug"
+      "cwd": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset",
+      "program": "c:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/build/Debug/outDebug"
     }
   ]
 }
