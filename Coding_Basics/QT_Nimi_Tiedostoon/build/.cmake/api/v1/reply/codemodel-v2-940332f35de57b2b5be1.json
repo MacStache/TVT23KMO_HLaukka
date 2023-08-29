@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-a29ba03dd58b35412d99.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QT_Nimi_Tiedostoon",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QT_Nimi_Tiedostoon::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QT_Nimi_Tiedostoon-Debug-a663f7efd03a89b54fd9.json",
+					"name" : "QT_Nimi_Tiedostoon",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Nimi_Tiedostoon/build",
+		"source" : "C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Nimi_Tiedostoon"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

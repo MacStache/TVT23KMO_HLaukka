@@ -1,0 +1,7 @@
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/QT_KumpiIsompi.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/edit_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/rebuild_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/list_install_components.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/install.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/install/local.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_KumpiIsompi/build/CMakeFiles/install/strip.dir

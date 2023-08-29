@@ -1,0 +1,7 @@
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/QT_Viikonpaiva.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/edit_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/rebuild_cache.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/list_install_components.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/install.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/install/local.dir
+C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Viikonpaiva/build/CMakeFiles/install/strip.dir

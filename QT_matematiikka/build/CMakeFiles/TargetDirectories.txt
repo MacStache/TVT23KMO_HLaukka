@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/QT_matematiikka.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_matematiikka/build/CMakeFiles/install/strip.dir

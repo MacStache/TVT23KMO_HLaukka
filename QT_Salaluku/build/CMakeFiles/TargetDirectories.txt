@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/QT_Salaluku.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Salaluku/build/CMakeFiles/install/strip.dir

@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/QT_Parilliset_luvut.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_Parilliset_luvut/build/CMakeFiles/install/strip.dir

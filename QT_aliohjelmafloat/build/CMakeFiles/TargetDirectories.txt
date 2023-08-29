@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/QT_aliohjelmafloat.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_aliohjelmafloat/build/CMakeFiles/install/strip.dir

@@ -1,7 +1,0 @@
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/QT_LokaaliMerkkijono.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/edit_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/rebuild_cache.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/list_install_components.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/install.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/install/local.dir
-C:/Users/henri/Google Drive/Coding/Qt_Harjoitukset/QT_LokaaliMerkkijono/build/CMakeFiles/install/strip.dir
