@@ -14,7 +14,7 @@ int game(int maxnum) {
 
     srand(maxnum);                                  //Alustetaan random number seed käyttäjän antaman maxnum muuttujan mukaan
 
-    for (int i=0; i<1; i++){                        //For looppi, jossa peli pyöritetään
+    for (int i=0; i<1; i++){                        //For looppi, jossa peli pyöritetään (looppiin voidaan lisätä pelikierroksia i<1 kohtaa muokkaamalla) 
         int satunnaisluku = 1 + rand() % maxnum;    /*Pyöräytetään satunnaisluku. Aloitetaan "1+" kohdassa ykkösestä (ettei arvata nollia)
                                                     ja asetetaan maksimiksi käyttäjän syöttämä maxnum. rand() arpoo kaikkien näiden välillä olevien
                                                     väliltä */
