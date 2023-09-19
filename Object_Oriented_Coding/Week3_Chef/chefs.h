@@ -7,8 +7,8 @@
 using namespace std;
 
 class Chef { //Chef luokan startti
-private:
-    string name; //nimi on salainen.
+protected:
+    string name; //nimi on suojattu.
 
 public:
     Chef(string name) : name(name) { //kokin konstruktori
