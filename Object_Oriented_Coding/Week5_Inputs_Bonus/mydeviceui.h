@@ -4,7 +4,7 @@
 #include "devicedisplay.h"
 #include "devicetouchpad.h"
 
-class MyDeviceUI
+class MyDeviceUI : DeviceBaseClass
 {
 public:
     MyDeviceUI();
@@ -14,10 +14,11 @@ public:
     void uiSetTouchPadInformation();
     void uiSetDisplayInformation();
     void uiShowDeviceInformation();
+
 private:
-    DeviceMouse * pDeviceMouse;
-    DeviceDisplay * pDeviceDisplay;
-    DeviceTouchPad * pDeviceTouchpad;
+    DeviceMouse *pDeviceMouse;
+    DeviceDisplay *pDeviceDisplay;
+    DeviceTouchPad *pDeviceTouchPad;
 };
 
 #endif // MYDEVICEUI_H

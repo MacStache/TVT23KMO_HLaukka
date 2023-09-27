@@ -2,12 +2,13 @@
 #define DEVICEMOUSE_H
 #include "devicebaseclass.h"
 
-class DeviceMouse
+class DeviceMouse : public DeviceBaseClass
 {
 public:
     DeviceMouse();
     void setPrimaryButton();
     short getPrimaryButton();
+
 private:
     short primaryButton;
 };

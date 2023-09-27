@@ -7,8 +7,19 @@ DeviceTouchPad::DeviceTouchPad()
 
 void DeviceTouchPad::setTouchPadSensitivity()
 {
-    cout << "Anna Touchpad Sensitivity arvo" << endl;
-    cin >> touchPadSensitivity;
+    int valinta;
+    bool validInput = false;
+
+    while(!validInput) {
+    cin >> valinta;
+
+    if (valinta >= 1 && valinta <= 5){
+        this->touchPadSensitivity = valinta;
+        validInput = true;
+    } else {
+        cout << "The input is not valid. Input a value between 1-5. " <<endl;
+    }
+  }
 }
 
 short DeviceTouchPad::getTouchPadSensitivity()

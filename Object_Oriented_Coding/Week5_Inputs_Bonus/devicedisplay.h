@@ -3,12 +3,13 @@
 #include "devicebaseclass.h"
 
 
-class DeviceDisplay
+class DeviceDisplay : public DeviceBaseClass
 {
 public:
     DeviceDisplay();
     void setDisplayResolution();
     short getDisplayResolution();
+
 private:
     short displayResolution;
 };

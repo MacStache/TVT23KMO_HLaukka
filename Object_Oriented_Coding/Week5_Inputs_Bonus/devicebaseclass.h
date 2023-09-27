@@ -9,6 +9,7 @@ public:
     DeviceBaseClass();
     void setDeviceID();
     short getDeviceID();
+
 protected:
     short deviceID;
 };
