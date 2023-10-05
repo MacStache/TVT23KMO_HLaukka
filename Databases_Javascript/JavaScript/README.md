@@ -1,0 +1,1 @@
+These are just basic JavaScript excercises coded during class.
