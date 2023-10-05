@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/MacStache/TVT23KMO_HLaukka.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacStache/TVT23KMO_HLaukka/issues"
+  },
+  "homepage": "https://github.com/MacStache/TVT23KMO_HLaukka#readme",
   "dependencies": {
     "express": "^4.18.2"
   }
