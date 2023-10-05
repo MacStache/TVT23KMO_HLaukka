@@ -1,22 +1,14 @@
 {
-  "name": "Databases_Javascript",
+  "name": "databases_javascript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MacStache/TVT23KMO_HLaukka.git#main"
-  },
-  "author": "Henri Laukka",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MacStache/TVT23KMO_HLaukka/issues"
-  },
-  "homepage": "https://github.com/MacStache/TVT23KMO_HLaukka/tree/main#readme",
   "dependencies": {
-    "express": "^4.18.2",
+    "express": "^4.18.2"
   }
 }
