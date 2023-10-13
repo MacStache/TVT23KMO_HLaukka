@@ -4,7 +4,7 @@ const stundentData=[
     [id_student:3, firstname:'Jani', lastname:'Juoksija'],
 ];
 
-const studentData={
+const student={
     getAllStudents: function(){
         return studentData;
     },
@@ -21,4 +21,5 @@ const studentData={
         return "Poistetaan opiskelija, jonka id="+id;
     },
 };
+
 module.exports=student;
