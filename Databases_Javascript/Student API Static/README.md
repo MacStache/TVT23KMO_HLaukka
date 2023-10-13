@@ -1,3 +1,5 @@
+student-api_static
+
 REST API esimerkki, jonka tarkoituksena on havainnollistaa MVC-mallia ja APIn tekemistä Node.js:n avulla käyttäen Express.js frameworkkiä.
 
 Tässä esimerkissä ei käytetä vielä tietokantaa, vaan data on staattista. Data sisältää tietoja opiskelijoista ja muodostuu seuraavista kentistä:
