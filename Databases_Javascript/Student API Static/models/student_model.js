@@ -1,7 +1,7 @@
-const stundentData=[
-    [id_student:1, firstname:'Teppo', lastname:'Testi'],
-    [id_student:2, firstname:'Henkka', lastname:'Laukka'],
-    [id_student:3, firstname:'Jani', lastname:'Juoksija'],
+const studentData=[
+    {id_student:1, firstname:'Teppo', lastname:'Testi'},
+    {id_student:2, firstname:'Henkka', lastname:'Laukka'},
+    {id_student:3, firstname:'Jani', lastname:'Juoksija'},
 ];
 
 const student={

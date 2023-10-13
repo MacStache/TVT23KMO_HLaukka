@@ -8,23 +8,24 @@ router.get('/',function(request,response){
 });
 
 router.get('/:id',function(request,response){
-    let data=student.getOneStudent(request.paramps.id);
+    let data=student.getOneStudent(request.params.id);
     response.json(data);
 });
 
-router.post('/', function(request,response){
-    let data=student.addStudent();
+router.post('/',function(request,response){
+    let data=student.addStudent(request.body);
+    console.log(request.body);
     response.json(data);
 });
 
-router.put('/:id', function(request,response){
+router.put('/:id',function(request,response){
     let data=student.updateStudent(request.params.id);
-    request.json(data);
+    response.json(data);
 });
 
-router.delete('/:id', function(request,response){
+router.delete('/:id',function(request,response){
     let data=student.deleteStudent(request.params.id);
-    request.json(data);
+    response.json(data);
 });
 
 module.exports=router;
