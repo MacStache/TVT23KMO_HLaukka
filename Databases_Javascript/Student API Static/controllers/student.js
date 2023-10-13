@@ -9,7 +9,7 @@ router.get('/',function(request,response){
 
 router.get('/:id',function(request,response){
     let data=student.getOneStudent(request.params.id);
-    response.json(data);
+    response.json(data)
 });
 
 router.post('/',function(request,response){
