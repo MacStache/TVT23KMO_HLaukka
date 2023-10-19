@@ -1,20 +1,16 @@
-const studentData=[
-    {id_student:1, firstname:'Teppo', lastname:'Testi'},
-    {id_student:2, firstname:'Henkka', lastname:'Laukka'},
-    {id_student:3, firstname:'Jani', lastname:'Juoksija'},
-];
+const db = require('../database');
 
 const student={
-    getAllStudents: function(){
-        return studentData;
+    getAllStudents: function(callback){
+        return db.query("SELECT * FROM student", callback);
     },
-    getOneStudent: function(id){
-        return studentData[id-1];
+    getOneStudent: function(id, callback){
+        return db.query("SELECT * FROM student where id_student=?", [id], callback);
     },
-    addStudent: function(newData){
+    addStudent: function(newData,callback){
         // return "Lisätään uusi opiskelija (insert into...";
-        let sql="insert into student values("+newData.id_student+", "+newData.firstname+", "+newData.lastname+");";
-        return sql;
+        return db.query("INSERT INTO student values(?,?,?)", 
+        [newData.id_student, newData.firstname, newData.lastname], callback);
     },
     updateStudent: function(id){
         return "Päivitetään opiskelija, jonka id="+id;
