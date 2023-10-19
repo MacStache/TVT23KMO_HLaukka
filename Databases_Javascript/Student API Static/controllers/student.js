@@ -32,19 +32,32 @@ router.post('/',function(request,response){
             response.json(err);
         }
         else{
-            response.json(data);
+            response.send(data);
         }
     });    
 });
 
 router.put('/:id',function(request,response){
-    let data=student.updateStudent(request.params.id);
-    response.json(data);
+    student.updateStudent(request.params.id, request.body, function(err,data){
+        if (err){
+            response.json(err);
+        }
+        else{
+            response.send(data);
+        }
+    });
 });
 
 router.delete('/:id',function(request,response){
-    let data=student.deleteStudent(request.params.id);
-    response.json(data);
+    student.deleteStudent(request.params.id, function(err,data){
+        if (err){
+            response.json(err);
+        }
+        else{
+            console.log(data.affectedRows);
+            response.json(data.affectedRows);
+        }
+    });
 });
 
 module.exports=router;
