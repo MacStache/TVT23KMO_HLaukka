@@ -2,3 +2,4 @@ build*\
 Schoolwork.code*
 node_modules/
 rustlings/*
+rustlings/
