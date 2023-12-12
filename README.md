@@ -4,4 +4,4 @@ This repository is meant for the uploading of Oulu University of Applied Science
 
 Maintained and owned by: Henri Laukka (https://github.com/MacStache)
 
-Started to learn rust and the excersizes done can be found from the folder: Rustling -> Excersizes 
+Started to learn rust and the excersizes done will be uploaded here in the near future.
