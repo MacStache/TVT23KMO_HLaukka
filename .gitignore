@@ -3,3 +3,6 @@ Schoolwork.code*
 node_modules/
 rustlings/*
 rustlings/
+.vscode/
+.vscode/*
+.editorconfig
