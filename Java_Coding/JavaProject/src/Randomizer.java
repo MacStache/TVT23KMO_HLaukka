@@ -7,17 +7,17 @@ public class Randomizer {
         ArrayList<String> names = new ArrayList<>();
 
         names.add("Henkka Laukka");
-        names.add("Sanna Mackey");
-        names.add("Aaro kallioinen");
-        names.add("Maija Björkman");
-        names.add("Peetu Rantanen");
-        names.add("Jere Jyrinki");
-        names.add("Theo Sihvo");
-        names.add("Pasi Honka");
-        names.add("Johanna Kuikka");
-        names.add("Jenni Korhonen");
-        names.add("Lari Lepistö");
-        names.add("Jaana Ahola");
+        names.add("Jooseppi Joukahainen");
+        names.add("Jaska Jantteri");
+        names.add("Teppo Testi");
+        names.add("Matti Meikäläinen");
+        names.add("Maija Meikäläinen");
+        names.add("Mikko Mallikas");
+        names.add("Aila Antelias");
+        names.add("Pekka Pouta");
+        names.add("Jorma Jormalainen");
+        names.add("Kerma Kermalainen");
+        names.add("Kalle Kalamies");
 
         for (int i = 0; i < 12; i++) {
         
