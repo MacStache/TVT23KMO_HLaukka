@@ -1,0 +1,12 @@
+backend/node_modules/
+banksimul08/build/*
+banksimul08/*.user
+build/*
+*.o
+*.exe
+/debug/
+*.pro.user
+*.user
+*.user.*
+*.qmake.stash
+*.pro.user.*
