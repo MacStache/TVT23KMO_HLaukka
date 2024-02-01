@@ -11,6 +11,10 @@ a {
     }
 }
 
+p {
+    margin: $general-margin;
+}
+
 header {
     @include flex-container;
 }
@@ -20,7 +24,6 @@ footer {
     background-color: $dark-background-color;
     p {
         color: $light-foreground-color;
-        font-weight: bold;
     }
 }
 
@@ -62,6 +65,21 @@ article {
     }
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:first-child {
+      background-color: #d7d7fe;
+    }
+  }
 
-  
 @import "media-query";

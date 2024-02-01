@@ -33,6 +33,10 @@ a:hover {
   font-weight: bold;
 }
 
+p {
+  margin: 1em;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -49,7 +53,6 @@ footer {
 }
 footer p {
   color: #fff;
-  font-weight: bold;
 }
 
 div#container {
@@ -90,6 +93,23 @@ article div img {
 }
 article div h3, article div p {
   margin: 1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table th {
+  background-color: #f2f2f2;
+}
+table tr:first-child {
+  background-color: #d7d7fe;
 }
 
 @media only screen and (max-width: 1200px) {
