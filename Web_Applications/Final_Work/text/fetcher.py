@@ -1,3 +1,7 @@
+# Tällä scriptillä poistin frequencies.txt tiedostosta kaikki muut sarakkeet paitsi aseman nimen.
+# sekä lisäsin ' -hapsut aseman nimen ympärille, että sen kartoittaminen scripts.js tiedostossa 
+# oli nopeampaa ja helpompaa. Scripti osaa myös poistaa tuplat.
+
 # importataan csv-moduuli, joka mahdollistaa tiedostojen lukemisen ja kirjoittamisen
 import csv
 

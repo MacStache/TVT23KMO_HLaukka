@@ -1,3 +1,5 @@
+# Tällä scriptillä siivosin kaiken turhan tiedon pois frequencies.txt tiedostosta ja jätin jäljelle 
+# pelkästään Kunta, Aseman nimi sekä Taajuus (MHz) -sarakkeet.
 # importataan csv-moduuli, joka mahdollistaa tiedostojen lukemisen ja kirjoittamisen
 import csv
 # asetetaan tiedostojen polut muuttujiin, input = sisään tuleva data, output = puhdistettu data

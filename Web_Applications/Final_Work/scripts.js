@@ -9,10 +9,13 @@ let firstRow;
 fetch('text/cleaned_frequencies.txt')
     .then(response => response.text())
     .then(data => {
+        // Luodaan taulukko datasta, tehdään rivit ja sarakkeet oikeissa paikoissa
         const rows = data.split('\n');
         const tableData = rows.map(row => row.split('\t'));
         table = createTable(tableData);
         document.body.appendChild(table);
+        //luodaan footer. Jostain syystä tälle piti etsiä tarkka paikka tästä, koska HTML-koodiin sisällytettynä 
+        //se olisi tullut taulukon yläpuolelle. En tiedä miksi, mutta toimii, joten en koske enää.
         createFooter();
     })
     .catch(error => console.error('Error fetching the file:', error));
@@ -27,35 +30,23 @@ searchInput.addEventListener('input', function () {
 function createTable(tableData) {
     const htmlTable = document.createElement('table');
     htmlTable.id = 'frequenciesTable';
-
+    // Luodaan otsikkorivi
     const headerRow = htmlTable.insertRow();
     const columns = ["Kunta", "Aseman nimi", "Taajuus (MHz)"];
-
+    // Luodaan otsikkosolut
     columns.forEach(column => {
         const cell = headerRow.insertCell();
         cell.textContent = column;
     });
 
-    // Lisätään firstRow taulukkoon
-    firstRow = htmlTable.insertRow();
-    tableData[0].forEach((cellData, index) => {
-        const cell = firstRow.insertCell();
-        // Add hyperlink based on text in "Aseman nimi" column
-        if (columns[index] === "Aseman nimi") {
-            const link = createLink(cellData);
-            cell.appendChild(link);
-        } else {
-            cell.textContent = cellData;
-        }
-    });
-
-    // Lisätään muut rivit taulukkoon
-    tableData.slice(1).forEach(rowData => {
+    // Lisätään rivit taulukkoon
+    tableData.slice(0).forEach(rowData => {
         const row = htmlTable.insertRow();
         rowData.forEach((cellData, index) => {
             const cell = row.insertCell();
-            // Add hyperlink based on text in "Aseman nimi" column
+            // Lisätään hyperlinkki "Aseman nimi" soluun
             if (columns[index] === "Aseman nimi") {
+                //kutsutaan createLink funktiota
                 const link = createLink(cellData);
                 cell.appendChild(link);
             } else {
@@ -63,8 +54,7 @@ function createTable(tableData) {
             }
         });
     });
-
-    // Kutsutaan funktiota, joka luo ja lisää footerin
+    // palautetaan taulukko
     return htmlTable;
 }
 
