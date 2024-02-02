@@ -1,9 +1,7 @@
 // Haetaan html-tiedostossa oleva input-elementti, jonka id-attribuutti on location
 const searchInput = document.getElementById('location');
-let table;  // Declare the table variable
-
-// Luodaan firstRow muuttuja, joka sisältää ensimmäisen rivin
-let firstRow;
+let table;  // taulukon oma muuttuja
+let firstRow; // firstRow muuttuja, joka sisältää ensimmäisen rivin
 
 // Lataa taulukon heti sivun latautuessa
 fetch('text/cleaned_frequencies.txt')
@@ -15,12 +13,12 @@ fetch('text/cleaned_frequencies.txt')
         table = createTable(tableData);
         document.body.appendChild(table);
         //luodaan footer. Jostain syystä tälle piti etsiä tarkka paikka tästä, koska HTML-koodiin sisällytettynä 
-        //se olisi tullut taulukon yläpuolelle. En tiedä miksi, mutta toimii, joten en koske enää.
+        //se olisi tullut taulukon yläpuolelle. Asynkronisesta suorituksesta johtuen? En tiedä miksi, mutta nyt toimii, joten en koske enää.
         createFooter();
     })
     .catch(error => console.error('Error fetching the file:', error));
 
-// Käynnistetään tapahtumankäsittelijä, joka reagoi input-elementin muutoksiin
+// Käynnistetään tapahtumankäsittelijä, joka reagoi input-elementin muutoksiin. Eli, jos input boxin sisältö muuttuu niin haku pyörähtää
 searchInput.addEventListener('input', function () {
     // Suoritetaan haku!
     performSearch();
@@ -46,7 +44,7 @@ function createTable(tableData) {
             const cell = row.insertCell();
             // Lisätään hyperlinkki "Aseman nimi" soluun
             if (columns[index] === "Aseman nimi") {
-                //kutsutaan createLink funktiota
+                //kutsutaan createLink funktiota, että saadaan "Aseman nimi" -sarakkeeseen linkit automatiikalla 
                 const link = createLink(cellData);
                 cell.appendChild(link);
             } else {
@@ -94,7 +92,8 @@ function performSearch() {
 // Funktio luo hyperlinkin tekstiin perustuen
 function createLink(cellText) {
     const link = document.createElement('a');
-    // Kartoitetaan linkitettävät tekstit ja niiden linkit
+    // Kartoitetaan linkitettävät tekstit ja niiden linkit. 
+    // Näitä on ihan simona, mutta en keksinyt mitään helpompaakaan keinoa tätä varten  
     const urlMapping = {
         'Radio Mega': 'https://mega.fi',
         'Aito Iskelmä': 'https://www.aitoiskelma.fi/',
