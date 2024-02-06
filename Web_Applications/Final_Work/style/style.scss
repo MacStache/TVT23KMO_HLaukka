@@ -3,6 +3,13 @@
 @import "mixins";
 @import "menu";
 
+body {
+    background-color: $light-background-color;
+    color: $dark-foreground-color;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     &:hover {
@@ -17,6 +24,10 @@ p {
 
 header {
     @include flex-container;
+    background-color: $dark-background-color;
+    h1 {
+        color: $light-foreground-color;
+    }
 }
 
 footer {
@@ -31,6 +42,19 @@ div#container {
     display: flex;
     flex-direction: column;
     margin: $general-margin;
+}
+
+div#input {
+    width: 100%;
+    margin: 0 auto;
+    input, select {
+        font-size: larger;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
 }
 
 div#content {
@@ -68,7 +92,8 @@ article {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    
     th, td {
       padding: 10px;
       border: 1px solid #ddd;
@@ -79,6 +104,16 @@ table {
     }
     tr:first-child {
       background-color: #d7d7fe;
+    }
+    td:last-child {
+      text-align: center;
+      width: 20%;
+    }
+    td:first-child {
+      width: 20%;
+    }
+    td:nth-child(2) {
+        width: 60%;
     }
   }
 

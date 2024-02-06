@@ -20,10 +20,26 @@
         padding-left: $general-padding / 2;
         }
     }
+    table {
+        width: 100%;
+    }
+    
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 799px) {
     div#content section {
         flex-direction: column;
+    }
+    table {
+        width: 100%;
+        font-size: small;
+    }
+    
+}
+
+
+@media (min-width: 800px) {
+    table {
+        width: 100%;
     }
 }

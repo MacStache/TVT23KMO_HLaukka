@@ -1,9 +1,11 @@
 nav {
     display: flex;
+    justify-content: center;
     align-items: center;
     border-top: 1px solid $dark-foreground-color;
     border-bottom: 1px solid $dark-foreground-color;
     height: 40px;
+    background-color: #b1b1b1;
     ul {
         padding-left: $general-padding / 2;
         li {
