@@ -1,36 +1,65 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Whats The Frequency?</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style/style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Whats The Frequency?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
     <body>
         <div>
+            <div id="boxed">
             <header>
             <h1>What's The Frequency?</h1>
             </header>
-            <div>
             <nav>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Frequencies</a></li>
+                    <li><a href="./">About</a></li>
+                    <li><a href="frequencies.html">Frequencies</a></li>               
+                    <li><a href="favorites.html">Favorites</a></li>
                 </ul>
             </nav>
             </div>
-            <div id="input">
+            <div id="about">
+                <p> <b>What's The Frequency</b> is a web application that allows the user to find the radio frequencies available 
+                    at the location that they are at right now. The site uses a script to parse the contents of a text file into a table, 
+                    which hosts all the publicly available radio frequencies in Finland.
+                </p>
                 <p>
-                <input type="text" id="location" name="location" placeholder="Enter your location">
+                    The frequencies have been collected from the 
+                    <a href="https://www.traficom.fi/en/communications/tv-and-radio/radio-stations-finland">publicly available database</a> of 
+                    <a href="https://www.traficom.fi/en">Traficom</a>, the Finnish Transport and Communications Agency.
+                </p>
+                <p>
+                    The frequencies can be downloaded as a <a href="https://github.com/MacStache/WhatsTheFrequency/blob/main/text/frequencies.txt">text file</a> 
+                    from the <a href="https://www.traficom.fi/en/communications/tv-and-radio/radio-stations-finland">Traficom website</a>.
+                    The downloaded file included a lot of data that is unnecessary for this project, which means that it needed to be cleaned. 
+                    The cleaning was done using a <a href="https://github.com/MacStache/WhatsTheFrequency/blob/main/text/cleaner.py">Python script</a>.
+                    The resulting <a href="https://github.com/MacStache/WhatsTheFrequency/blob/main/text/cleaned_frequencies.txt">text file</a> 
+                    only includes the locations, names and frequencies of the radio stations.
+                </p>
+                <p>
+                    The frequencies table includes a search bar that allows the user to search for a specific location which will then be used to filter the frequencies.
+                    The site also includes an automated script that will add a link to the stations website. The link table was stripped from the cleaned frequencies text file and 
+                    ran again through a modified <a href="https://github.com/MacStache/WhatsTheFrequency/blob/main/text/linker.py">Python script</a> that removes everything but 
+                    the station names from <a href="https://github.com/MacStache/WhatsTheFrequency/blob/main/text/stations_list.txt">the file</a>. 
+                    It also removes duplicates which made the link table easier to manage. 
+                </p>
+                <p>
+                    The site also includes a favorites page that allows the user to add their favorite stations to a list. The list is stored in the local storage of the users browser.
+                    The functionality also includes a button that allows the user to remove the station from the list, as well as unchecking the checkbox in the frequencies table.
+                </p>
+                <p>
+                    The site is a final project for the course "Web Applications" at <a href="https://oamk.fi/en/">Oulu University of Applied Sciences</a>.
                 </p>
             </div>
+            <footer>
+                <p>
+                    Made by: Henri Laukka | <a href="https://github.com/MacStache/WhatsTheFrequency/">GitHub</a>
+                </p>
+            </footer>
         </div>
-        <script src="js/functions.js"></script>
     </body>
 </html>
