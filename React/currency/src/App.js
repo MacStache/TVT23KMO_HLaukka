@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [sek, setSek] = useState('');
+	const [eur, setEur] = useState(0);
+
+	const calculate = (e) => {
+		setEur(sek * 0.089)
+	}
+
+	return (
+		<div className='container'>
+			<h3>Valuuttalaskuri</h3>
+			<form>
+				<div>
+					<label>Ruotsin kruunut</label>
+					<input type="number" value={sek} onChange={e => setSek(e.target.value)}/>
+				</div>
+				<div>
+					<label>Eurot</label>
+					<output>{eur.toFixed(2)}</output>
+				</div>
+				<button type='button' onClick={calculate}>Laske</button>
+			</form>
+		</div>
+	);
 }
 
 export default App;
