@@ -11,7 +11,7 @@ export default function Login(props) {
         e.preventDefault();
         if (username === 'admin' && password === 'admin') {
             props.setUser({user: username,password: password});
-            navigate('/home');
+            navigate('/');
         }
     }
 
