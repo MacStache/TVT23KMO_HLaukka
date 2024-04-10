@@ -27,7 +27,7 @@ I am a 38-year-old student from Oulu University of Applied Sciences. As my main 
   - Exercises done for the Web Applications course. These are done in HTML and CSS as well as JavaScript (started on January 2024)
  
 ### SEPARATE REPOS FOR COURSE FINAL EXERCISES
-+ [What's The Frequency?](https://github.com/MacStache/WhatsTheFrequency)
++ [**What's The Frequency?**](https://github.com/MacStache/WhatsTheFrequency)
   - The final exercise of Web Applications course. This web application allows the user to find the radio frequencies available
 at the location that they are at right now. The site uses a script to parse the contents of a text file into a searchable table,
 which hosts all the publicly available radio frequencies in Finland.
@@ -41,7 +41,7 @@ I have also been heavily involved in these school projects:
 + [**BankSystem08**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Projects/BankSystem)
   - A project from the Databases and JavaScript course which involves a backend running on a node.js Express server, an SQL-database and a QT frontend. I still need to do a proper readme.md with UI screenshots for this. I will update this when I have the time.
   - I coded most of the backend as well as the SQL procedures for this project. Was a really demanding project all-in-all, but we managed!
-+ [Placeholder for our ongoing project](https://github.com/MacStache/TVT23KMO_HLaukka) 
++ [**Placeholder for our ongoing project**](https://github.com/MacStache/TVT23KMO_HLaukka) 
   - We're currently working on a project that is "yet another" movie database. Will post the finished work into this repo as well.  
 
 ### UPDATES
