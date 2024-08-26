@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useUser } from "../context/UseUser";
 
-export default function Logout({setUser}) {
+export default function Logout() {
+    const { setUser } = useUser();
     setUser(null);
     return (
-    <div>You have logged out</div>
-  )
+        <p>You have logged out.</p>
+    );
 }

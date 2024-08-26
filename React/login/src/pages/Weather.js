@@ -10,7 +10,7 @@ export default function Weather() {
             navigator.geolocation.getCurrentPosition(position => {
                 setPosition(position)
                 const address = process.env.REACT_APP_URL + 
-                '?lat=' + position.coords.latitude +
+                'lat=' + position.coords.latitude +
                 '&lon=' + position.coords.longitude +
                 '&units=metric' +
                 '&lang=fi' +

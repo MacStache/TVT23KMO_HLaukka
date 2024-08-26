@@ -1,11 +1,7 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom';
+import React  from 'react'
 
-export default function About({user}) {
-  if (user === null) {
-    return <Navigate to="/" />;
-  }
-  return (
-    <p>This is about</p>
-  );
+export default function About() {
+    return (
+        <p>This is About</p>
+    )
 }
