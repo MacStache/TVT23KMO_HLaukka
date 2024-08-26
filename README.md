@@ -41,8 +41,10 @@ I have also been heavily involved in these school projects:
 + [**BankSystem08**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Projects/BankSystem)
   - A project from the Databases and JavaScript course which involves a backend running on a node.js Express server, an SQL-database and a QT frontend. I still need to do a proper readme.md with UI screenshots for this. I will update this when I have the time.
   - I coded most of the backend as well as the SQL procedures for this project. Was a really demanding project all-in-all, but we managed!
-+ [**Placeholder for our ongoing project**](https://github.com/MacStache/TVT23KMO_HLaukka) 
-  - We're currently working on a project that is "yet another" movie database. Will post the finished work into this repo as well.  
++ [**G12MovieDB**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Projects/G12MovieDB) 
+  - We did a movie database as our final project for our Web Development courses. The project was done by using Java Springboot for the backend and React JS for the frontend. The database is PostgreSQL.
+  - We all coded something for each portion of the project so I got to know the basics of Java Springboot, React JS and PostgreSQL.
+  - Screenshots and a full readme included in the link.
 
 ### UPDATES
 
@@ -50,12 +52,15 @@ I have also been heavily involved in these school projects:
 Started to learn rust and the exercises done will be uploaded here in the near future.
 
 ### UPDATE 15.01.2024
-We started a Java Programming course as well as a course in Web Applications and those excersises will be uploaded here as well 
+We started a Java Programming course as well as a course in Web Applications and those excersises will be uploaded here as well.
 
 ### UPDATE 30.01.2024
-Updated readme.md: Added a list of repository contents and projects I've been involved in 
+Updated readme.md: Added a list of repository contents and projects I've been involved in.
 
 ### UPDATE 10.04.2024
 Moved this repository to [**GitLab**](https://gitlab.com/macgroupche/TVT23KMO_HLaukka/) as well. 
 
 Also added the final exercise of my Web Applications course.
+
+### UPDATE 26.08.2024
+Added the G12MovieDB project to this repo.
