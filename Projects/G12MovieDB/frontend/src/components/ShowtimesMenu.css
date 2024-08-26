@@ -1,0 +1,21 @@
+.showtimes-menu-container {
+    width: 350px; 
+    height: 1200px;
+    padding: 40px;
+    background-color: var(--secondary-color); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    color: var(--primary-text-color); 
+  }
+  
+  .showtimes-list {
+    margin-top: var(--gutter-small);
+  }
+  
+  .showtime-item {
+    margin-bottom: var(--gutter-small);
+  }
+  
+  .showtime-start {
+    float: left;
+    margin-right: var(--gutter-small);
+  }

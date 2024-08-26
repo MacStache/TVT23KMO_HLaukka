@@ -1,0 +1,4 @@
+.vscode
+backend/moviedb/src/main/resources/database.properties
+backend/moviedb/src/main/resources/api-key.yaml
+

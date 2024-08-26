@@ -1,0 +1,31 @@
+.groupsmenu-container {
+    width: 350px; 
+    height: 1200px;
+    padding: 40px;
+    background-color: var(--secondary-color); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    color: var(--primary-text-color); 
+  }
+
+  .groupsmenu-box H2 {
+    margin-bottom: var(--gutter-huge);
+  }
+  
+  .groupsmenu-list {
+    margin-top: var(--gutter-small);
+  }
+
+  .groupsmenu-list p {
+    margin-bottom: var(--gutter-large);
+  }
+  
+  .groupsmenu-item {
+    margin-bottom: var(--gutter-small);
+  }
+
+  @media (max-width: 800px) {
+  .groupsmenu-container {
+    width: 100%;
+  }
+ 
+}
