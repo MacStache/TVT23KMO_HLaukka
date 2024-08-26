@@ -52,12 +52,15 @@ I have also been heavily involved in these school projects:
 Started to learn rust and the exercises done will be uploaded here in the near future.
 
 ### UPDATE 15.01.2024
-We started a Java Programming course as well as a course in Web Applications and those excersises will be uploaded here as well 
+We started a Java Programming course as well as a course in Web Applications and those excersises will be uploaded here as well.
 
 ### UPDATE 30.01.2024
-Updated readme.md: Added a list of repository contents and projects I've been involved in 
+Updated readme.md: Added a list of repository contents and projects I've been involved in.
 
 ### UPDATE 10.04.2024
 Moved this repository to [**GitLab**](https://gitlab.com/macgroupche/TVT23KMO_HLaukka/) as well. 
 
 Also added the final exercise of my Web Applications course.
+
+### UPDATE 26.08.2024
+Added the G12MovieDB project to this repo.
