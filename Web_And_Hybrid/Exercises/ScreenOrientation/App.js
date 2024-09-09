@@ -68,7 +68,7 @@ export default function App() {
       
       {/* THIS IS VERSION 1. I UPGRADED FROM HERE TO A SIMPLER FUNCTION
         I decided to try and simplify this so I made the getButtonTitle and getButtonHandler functions.
-        I did not need to do it for this exersize, but I wanted to just to learn to use the handlers.
+        I did not need to do it for this exercize, but I wanted to just to learn to use the handlers.
       
       {(() => {
         if (isPortrait && !isLocked) {
