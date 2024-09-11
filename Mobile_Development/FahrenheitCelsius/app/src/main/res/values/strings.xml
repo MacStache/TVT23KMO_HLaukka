@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FahrenheitCelsius</string>
+    <string name="temperature">Temperature</string>
+    <string name="title">Fahrenheit/Celsius</string>
+    <string name="fahrenheit_to_celsius">Fahrenheit to Celsius</string>
+    <string name="Celsius_to_fahrenheit">Celsius to Fahrenheit</string>
+</resources>
