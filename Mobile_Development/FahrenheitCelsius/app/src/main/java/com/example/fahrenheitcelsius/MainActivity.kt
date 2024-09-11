@@ -37,8 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FahrenheitCelsiusTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FahrenheitCelsius(
-                    )
+                    FahrenheitCelsius(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -46,7 +45,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun FahrenheitCelsius () {
+fun FahrenheitCelsius (modifier: Modifier = Modifier) {
     var temperature: String by remember { mutableStateOf("") }
     var fahrenheitSelected by remember { mutableStateOf(true) }
     val temperatureToConvert: Float = temperature.toFloatOrNull() ?: 0.0f
@@ -57,7 +56,7 @@ fun FahrenheitCelsius () {
 
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.padding (8.dp)
+        modifier = modifier.padding (8.dp)
     ) {
         Text(
             text = stringResource(R.string.title),
@@ -71,7 +70,7 @@ fun FahrenheitCelsius () {
             onValueChange = {temperature = it},
             label = {Text(text = stringResource(R.string.temperature))},
             singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxWidth(),
             )
         Row(verticalAlignment = Alignment.CenterVertically) {
             RadioButton(
