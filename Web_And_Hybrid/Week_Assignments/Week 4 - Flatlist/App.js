@@ -1,13 +1,15 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { SafeAreaView, Text, FlatList, StyleSheet, StatusBar } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Constants from 'expo-constants';
 import uuid from 'react-native-uuid';
+import Constants from 'expo-constants';
 import Add from './components/Add';
-import Row from './components/Row';
 import Search from './components/Search';
+import Header from './components/Header';
+import Info from './components/Info';
+import TodoList from './components/TodoList';
 
-const STORAGE_KEY = '@shopping_list';
+const STORAGE_KEY = '@todo_list';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -48,7 +50,8 @@ export default function App() {
   const add = useCallback((name) => {
     const newItem = {
       id: uuid.v4(),
-      name: name
+      name: name,
+      taskDone: false,
     };
     setData((prevData) => [...prevData, newItem]);
   }, []);
@@ -57,32 +60,35 @@ export default function App() {
     setSelectedId(id);
   }, []);
 
+  const setTaskDone = useCallback((id) => {
+    const updatedData = data.map((item) => {
+      if (item.id === id) {
+        return { ...item, taskDone: !item.taskDone };
+      }
+      return item;
+    });
+    setData(updatedData);
+  }, [data]);
+
   const filteredData = data.filter(item => 
     item.name.toLowerCase().includes(criteria.toLowerCase())
   );
 
   return (
-  <SafeAreaView style={styles.safeArea}>
-    <Text style={styles.header}>Shopping List</Text>
-    <Search criteria={criteria} setCriteria={setCriteria} />
-    <Add add={add} />
-    <FlatList
-      data={filteredData} 
-      keyExtractor={(item) => item.id}
-      extraData={selectedId}
-      renderItem={({ item }) => (
-        <Row 
-          item={item}
-          selectedId={selectedId}
-          select={select}
-          data={data}
-          setData={setData}
-        />
-      )}
-      style={styles.list}
-      contentContainerStyle={styles.listContent}
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar barStyle="light-content" />
+      <Header title="Todo List" />
+      <Info infoText="Please type a task and press save to add it to the list. Tap a task to set it done. Tap trash can to remove. Use search function to search tasks." />
+      <Search criteria={criteria} setCriteria={setCriteria} />
+      <Add add={add} />
+      <TodoList 
+        data={filteredData}
+        selectedId={selectedId}
+        select={select}
+        setTaskDone={setTaskDone}
+        setData={setData}
       />
-  </SafeAreaView>
+    </SafeAreaView>
   );
 }
 
@@ -90,28 +96,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Constants.statusBarHeight,
     marginLeft: 20,
     marginRight: 20,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%', 
-    marginLeft: 20,
-    marginRight: 20,
-  },
-  header: {
-    fontSize: 24,
-    textAlign: 'center',
-    marginVertical: 20,
-  },
-  list: {
-    width: '100%', 
-  },
-  listContent: {
-    paddingHorizontal: 16, 
   },
 });
