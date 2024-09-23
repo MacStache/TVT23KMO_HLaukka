@@ -8,8 +8,8 @@
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/Theming" />
+            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/Theming/app" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
