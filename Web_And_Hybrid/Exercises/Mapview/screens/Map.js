@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
-import MapView from 'react-native-maps';
-import React from 'react';
+import MapView, { Marker } from 'react-native-maps';
+import React, {useState} from 'react';
 
 export default function Map(props) {
+  const [marker ,setMarker] = useState(null)
 
   /*
   useEffect(() => {
@@ -12,11 +13,25 @@ export default function Map(props) {
   }, []); 
   */
 
+  const showMarker = (e) => {
+    const coords = e.nativeEvent.coordinate
+    setMarker(coords)
+  }
+
   return (
     <MapView
       style={styles.map}
       region={props.location}
-    />
+      mapType={props.mapType}
+      onLongPress={showMarker}
+    >
+      {marker &&
+        <Marker
+          title='My Marker'
+          coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
+        />
+      }
+    </MapView>
   );
 }
 
