@@ -1,31 +1,33 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const User = ({ profile }) => {
-  if (!profile) {
-    return null;
-  }
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.topContainer}>
-        <Image style={styles.image} source={{ uri: `https://retroachievements.org${profile.UserPic}` }} />
-        <View style={styles.textContainer}>
-          <Text style={styles.textHeader}>{profile.User}</Text>
-          <Text style={styles.text}>
-            Member Since: <Text style={styles.textDate}>{profile.MemberSince}</Text>
-          </Text>
-          <Text style={styles.text}>Motto: {profile.Motto}</Text>
-        </View>
+const User = ({ profile, profileNotFound }) => {
+    return (
+      <View style={styles.container}> 
+        {!profile && !profileNotFound ? null : profileNotFound ? (
+          <Text style={styles.textHeader}>Profile not found</Text>
+        ) : ( 
+          <>
+            <View style={styles.topContainer}>
+              <Image style={styles.image} source={{ uri: `https://retroachievements.org${profile.UserPic}` }} />
+              <View style={styles.textContainer}>
+                <Text style={styles.textHeader}>{profile.User}</Text>
+                <Text style={styles.text}>
+                  Member Since: <Text style={styles.textDate}>{profile.MemberSince}</Text>
+                </Text>
+                <Text style={styles.text}>Motto: {profile.Motto}</Text>
+              </View>
+            </View>
+            <View style={styles.bottomContainer}>
+              <Text style={styles.text}>Rich Presence: {profile.RichPresenceMsg}</Text>
+              <Text style={styles.text}>Total Points: {profile.TotalPoints}</Text>
+              <Text style={styles.text}>Total True Points: {profile.TotalTruePoints}</Text>
+            </View>
+          </>
+        )}
       </View>
-      <View style={styles.bottomContainer}>
-        <Text style={styles.text}>Rich Presence: {profile.RichPresenceMsg}</Text>
-        <Text style={styles.text}>Total Points: {profile.TotalPoints}</Text>
-        <Text style={styles.text}>Total True Points: {profile.TotalTruePoints}</Text>
-      </View>
-    </View>
-  );
-};
+      );
+    };
 
 const styles = StyleSheet.create({
   container: {
