@@ -1,6 +1,6 @@
 import { API_KEY } from '@env'; // Import the API key from the environment variables
 
-const handleSearch = async (username, setUserProfile, setUserRecentAchievements) => {
+const useHandleSearch = async (username, setUserProfile, setUserRecentAchievements) => {
   if (!username) {
     alert('Please enter a username');
     return;
@@ -23,4 +23,4 @@ const handleSearch = async (username, setUserProfile, setUserRecentAchievements)
   }
 };
 
-export default handleSearch;
+export default useHandleSearch;

@@ -1,6 +1,6 @@
-import { Button, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
-import handleSearch from '../hooks/HandleSearch';
+import useHandleSearch from '../hooks/HandleSearch';
 import User from './User';
 import UserRecentAchievements from './UserRecentAchievements';
 
@@ -20,7 +20,7 @@ export default function Search() {
         />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => handleSearch(username, setUserProfile, setUserRecentAchievements)}
+          onPress={() => useHandleSearch(username, setUserProfile, setUserRecentAchievements)}
         >
           <Text style={styles.buttonText}>Search</Text>
         </TouchableOpacity>
