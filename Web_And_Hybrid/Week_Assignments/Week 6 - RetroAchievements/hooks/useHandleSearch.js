@@ -22,7 +22,6 @@ const useHandleSearch = async (username, setProfile, setAchievements, setProfile
       setProfile(null);
       setAchievements(null);
       setProfileNotFound(true);
-      console.error('Profile not found:', profileData);
       return;
     }
 

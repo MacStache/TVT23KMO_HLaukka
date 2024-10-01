@@ -10,10 +10,6 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <Search />
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <User />
-        <Achievements />
-      </ScrollView>
     </View>
   );
 }
