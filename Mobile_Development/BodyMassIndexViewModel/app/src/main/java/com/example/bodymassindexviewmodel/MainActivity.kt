@@ -1,5 +1,6 @@
 package com.example.bodymassindexviewmodel
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -47,6 +48,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@SuppressLint("DefaultLocale")
 @Composable
 fun Bmi(bmiViewModel: BMIViewModel = viewModel()) {
     Column (
@@ -64,7 +66,7 @@ fun Bmi(bmiViewModel: BMIViewModel = viewModel()) {
         )
         OutlinedTextField(
             value = bmiViewModel.heightInput,
-            onValueChange = { bmiViewModel.heightInput = it.replace(',', '.') },
+            onValueChange = { bmiViewModel.updateHeightInput(it.replace(',', '.')) },
             label = { Text(stringResource(R.string.height)) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -72,13 +74,15 @@ fun Bmi(bmiViewModel: BMIViewModel = viewModel()) {
         )
         OutlinedTextField(
             value = bmiViewModel.weightInput,
-            onValueChange = { bmiViewModel.weightInput = it.replace(',', '.') },
+            onValueChange = { bmiViewModel.updateWeightInput(it.replace(',', '.')) },
             label = { Text(stringResource(R.string.weight)) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth()
         )
-        Text(text = stringResource(R.string.result, String.format("%.2f", bmiViewModel.bmi).replace(',', '.')))
+        Text(text = stringResource(
+            R.string.result,
+            String.format("%.2f", bmiViewModel.bmi).replace(',', '.')))
     }
 }
 
