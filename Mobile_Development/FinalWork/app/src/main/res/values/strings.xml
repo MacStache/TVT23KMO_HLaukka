@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Juhlapyhät</string>
+    <string name="main_screen_title">Vuoden juhlapyhät</string>
+    <string name="info_screen_title">Tietoa sovelluksesta</string>
+    <string name="loading_message">Ladataan...</string>
+    <string name="error_message">Tietojen lataaminen epäonnistui</string>
+    <string name="go_to_info">Siirry inforuutuun</string>
+    <string name="go_to_main">Palaa sovellukseen</string>
+    <string name="info_text">Tämän sovelluksen koodasi Henkka Laukka osana Oulun ammattikorkeakoulun \"Mobiiliohjelmointi natiiviteknologioilla\" -kurssia</string>
+    <string name="no_data">Julkisia pyhäpäiviä ei löytynyt</string>
+</resources>

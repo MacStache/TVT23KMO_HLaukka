@@ -4,12 +4,12 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/MVVMAndAPI" />
+        <option name="externalProjectPath" value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/RetroAchievements" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/MVVMAndAPI" />
-            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/MVVMAndAPI/app" />
+            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/RetroAchievements" />
+            <option value="/var/home/henkka/Documents/Coding/TVT23KMO_HLaukka/Mobile_Development/RetroAchievements/app" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

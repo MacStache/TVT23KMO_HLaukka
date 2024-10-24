@@ -1,9 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Header from './components/Header';
 import Search from './components/Search';
-import User from './components/User';
-import Achievements from './components/Achievements';
 
 export default function App() {
   return (
