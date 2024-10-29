@@ -7,24 +7,35 @@ I am a 38-year-old student from Oulu University of Applied Sciences. As my main 
 
 ### CONTENTS (Alphabetically)
 + [**Coding_Basics**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Coding_Basics)
-  - Excersises for the basic C programming course done in QT (started on January 2023)
+  - Excersises for the basic C programming course done in QT. (started on January 2023)
   - Not getting any more updates
 + [**Databases_JavaScript**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Databases_Javascript)
   - Exercises for the Databases course. Done in Javascript and some Node.js stuff here as well (started on August 2023)
   - Not getting any more updates
 + [**Java_Coding**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Java_Coding)
-  - Exercises for the Java Coding course (started on January 2024)
+  - Exercises for the Java Coding course. (started on January 2024)
+  - Not getting any more updates
++ [**Mobile_Development**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Mobile_Development)
+  - Exercises done for the Mobile development with native technologies course. These are done with Kotlin. (started on August 2024)
   - Not getting any more updates
 + [**Object_Oriented_Coding**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Object_Oriented_Coding)
-  - Exercises for the C++ Object Oriented Coding course done in QT (started on August 2023)
+  - Exercises for the C++ Object Oriented Coding course done in QT. (started on August 2023)
+  - Not getting any more updates
++ [**Python**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Python)
+  - Python scripts and Jupiter notebooks for Physics and math in programming course.
   - Not getting any more updates
 + [**React**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/React)
-  - Exercises for the web application team project (started on March 2024) 
+  - Exercises for the web application team project. (started on March 2024)
+  - Not getting any more updates
 + [**Rust_Coding**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Rust_Coding)
   - Exercises done on my spare time to learn the basics of Rust. These are done with the excellent [Rustlings](https://github.com/rust-lang/rustlings).
   - Doing these with my spare time
 + [**Web_Applications**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Web_Applications)
-  - Exercises done for the Web Applications course. These are done in HTML and CSS as well as JavaScript (started on January 2024)
+  - Exercises done for the Web Applications course. These are done in HTML and CSS as well as Javascript (React JS). (started on January 2024)
+  - Not getting any more updates
++ [**Web_And_Hybrid**](https://github.com/MacStache/TVT23KMO_HLaukka/tree/main/Web_And_Hybrid)
+  - Exercises for the Web and hybrid applications course. These are done in React Native. (started on August 2024)
+  - Not getting any more updates
  
 ### SEPARATE REPOS FOR COURSE FINAL EXERCISES
 + [**What's The Frequency?**](https://github.com/MacStache/WhatsTheFrequency)
@@ -64,3 +75,6 @@ Also added the final exercise of my Web Applications course.
 
 ### UPDATE 26.08.2024
 Added the G12MovieDB project to this repo.
+
+### UPDATE 29.10.2024
+Added Web and hybrid applications and Mobile development with native technologies courses.
