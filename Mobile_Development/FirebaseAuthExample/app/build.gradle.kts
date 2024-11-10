@@ -17,6 +17,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"${project.property("GOOGLE_WEB_CLIENT_ID")}\"")
+
+    }
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {

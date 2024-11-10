@@ -1,7 +1,5 @@
 package com.example.firebaseauthexample
 
-import android.app.Activity
-import androidx.lifecycle.viewmodel.compose.viewModel
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -13,34 +11,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
@@ -59,7 +29,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
-import loginviewmodel.LoginViewModel
 import java.security.MessageDigest
 import java.util.UUID
 
@@ -67,8 +36,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
 
     //Declare an instance of FirebaseAuth
     private lateinit var auth: FirebaseAuth
-    private lateinit var loginViewModel: LoginViewModel
-
+    val webClientId = BuildConfig.GOOGLE_WEB_CLIENT_ID
 
     //In the onCreate() method, initialize the FirebaseAuth instance.
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,7 +44,6 @@ class EmailPasswordActivity() : AppCompatActivity() {
         setContentView(R.layout.activity_email_password)
         // Initialize Firebase Auth
         auth = Firebase.auth
-        loginViewModel = LoginViewModel()
 
         //Get references to the email and password fields and the register and sign in buttons.
         val emailField = findViewById<EditText>(R.id.emailField)
@@ -84,7 +51,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.registerButton)
         val signInButton = findViewById<Button>(R.id.signInButton)
         val googleSignInButton = findViewById<ImageButton>(R.id.googleSignInButton)
-        val composeView = findViewById<ComposeView>(R.id.compose_view)
+        val webClientId = BuildConfig.GOOGLE_WEB_CLIENT_ID
 
         //Set an OnClickListener on the register button that calls the createAccount method.
         registerButton.setOnClickListener {
@@ -102,9 +69,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
 
         // Call handleGoogleSignIn directly on button click
         googleSignInButton.setOnClickListener {
-            composeView.setContent {
-                loginViewModel.handleGoogleSignIn(this@EmailPasswordActivity)
-            }
+            handleGoogleSignIn(this)
         }
 
     }
@@ -177,13 +142,14 @@ class EmailPasswordActivity() : AppCompatActivity() {
                 }
             }
     }
-    private fun handleGoogleSignIn() {
+
+    private fun handleGoogleSignIn(context: Context) {
         lifecycleScope.launch {
-            googleSignIn().collect { result ->
+            googleSignIn(context).collect { result ->
                 result.fold(
                     onSuccess = {
                         Toast.makeText(this@EmailPasswordActivity, "Sign-In Success!", Toast.LENGTH_SHORT).show()
-                        // Handle additional success actions
+                        updateUI(it.user)
                     },
                     onFailure = { e ->
                         Toast.makeText(this@EmailPasswordActivity, "Sign-In Failed: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -210,7 +176,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
                 // Set up Google ID option
                 val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
                     .setFilterByAuthorizedAccounts(false)
-                    .setServerClientId("Your server client ID")
+                    .setServerClientId(webClientId)
                     .setNonce(hashedNonce)
                     .build()
 
