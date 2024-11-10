@@ -1,26 +1,57 @@
 package com.example.firebaseauthexample
 
+import android.app.Activity
+import androidx.lifecycle.viewmodel.compose.viewModel
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.credentials.GetCredentialRequest
-import androidx.credentials.GetPasswordOption
-import androidx.credentials.GetPublicKeyCredentialOption
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.ktx.auth
+import loginviewmodel.LoginViewModel
 
 class EmailPasswordActivity() : AppCompatActivity() {
 
     //Declare an instance of FirebaseAuth
     private lateinit var auth: FirebaseAuth
+    private lateinit var loginViewModel: LoginViewModel
+
 
     //In the onCreate() method, initialize the FirebaseAuth instance.
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,12 +59,15 @@ class EmailPasswordActivity() : AppCompatActivity() {
         setContentView(R.layout.activity_email_password)
         // Initialize Firebase Auth
         auth = Firebase.auth
+        loginViewModel = LoginViewModel()
 
         //Get references to the email and password fields and the register and sign in buttons.
         val emailField = findViewById<EditText>(R.id.emailField)
         val passwordField = findViewById<EditText>(R.id.passwordField)
         val registerButton = findViewById<Button>(R.id.registerButton)
         val signInButton = findViewById<Button>(R.id.signInButton)
+        val googleSignInButton = findViewById<ImageButton>(R.id.googleSignInButton)
+        val composeView = findViewById<ComposeView>(R.id.compose_view)
 
         //Set an OnClickListener on the register button that calls the createAccount method.
         registerButton.setOnClickListener {
@@ -49,6 +83,13 @@ class EmailPasswordActivity() : AppCompatActivity() {
             signIn(email, password)
         }
 
+        // Call handleGoogleSignIn directly on button click
+        googleSignInButton.setOnClickListener {
+            composeView.setContent {
+                    loginViewModel.handleGoogleSignIn(this)
+            }
+        }
+
     }
 
     //When initializing your Activity, check to see if the user is currently signed in.
@@ -62,7 +103,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
     }
 
     private fun reload() {
-        // Implement your reload logic here
+        // Implement the reload logic here. Not sure yet what to put here.
     }
 
     //Create a new createAccount method that takes in an email address and password, validates them,
