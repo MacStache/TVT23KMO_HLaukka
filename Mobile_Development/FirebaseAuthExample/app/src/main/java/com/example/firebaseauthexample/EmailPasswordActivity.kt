@@ -3,6 +3,7 @@ package com.example.firebaseauthexample
 import android.app.Activity
 import androidx.lifecycle.viewmodel.compose.viewModel
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -40,11 +41,27 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.credentials.CredentialManager
+import androidx.credentials.CustomCredential
+import androidx.credentials.GetCredentialRequest
+import androidx.credentials.exceptions.GetCredentialCancellationException
+import androidx.lifecycle.lifecycleScope
+import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.ktx.auth
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import loginviewmodel.LoginViewModel
+import java.security.MessageDigest
+import java.util.UUID
 
 class EmailPasswordActivity() : AppCompatActivity() {
 
@@ -86,7 +103,7 @@ class EmailPasswordActivity() : AppCompatActivity() {
         // Call handleGoogleSignIn directly on button click
         googleSignInButton.setOnClickListener {
             composeView.setContent {
-                    loginViewModel.handleGoogleSignIn(this)
+                loginViewModel.handleGoogleSignIn(this@EmailPasswordActivity)
             }
         }
 
@@ -159,5 +176,71 @@ class EmailPasswordActivity() : AppCompatActivity() {
                     updateUI(null)
                 }
             }
+    }
+    private fun handleGoogleSignIn() {
+        lifecycleScope.launch {
+            googleSignIn().collect { result ->
+                result.fold(
+                    onSuccess = {
+                        Toast.makeText(this@EmailPasswordActivity, "Sign-In Success!", Toast.LENGTH_SHORT).show()
+                        // Handle additional success actions
+                    },
+                    onFailure = { e ->
+                        Toast.makeText(this@EmailPasswordActivity, "Sign-In Failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+                )
+            }
+        }
+    }
+
+    private suspend fun googleSignIn(context: Context): Flow<Result<AuthResult>> {
+        val firebaseAuth = FirebaseAuth.getInstance()
+        return callbackFlow {
+            try {
+                // Initialize Credential Manager
+                val credentialManager: CredentialManager = CredentialManager.create(context)
+
+                // Generate a nonce (a random number used once)
+                val ranNonce: String = UUID.randomUUID().toString()
+                val bytes: ByteArray = ranNonce.toByteArray()
+                val md: MessageDigest = MessageDigest.getInstance("SHA-256")
+                val digest: ByteArray = md.digest(bytes)
+                val hashedNonce: String = digest.fold("") { str, it -> str + "%02x".format(it) }
+
+                // Set up Google ID option
+                val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
+                    .setFilterByAuthorizedAccounts(false)
+                    .setServerClientId("Your server client ID")
+                    .setNonce(hashedNonce)
+                    .build()
+
+                // Request credentials
+                val request: GetCredentialRequest = GetCredentialRequest.Builder()
+                    .addCredentialOption(googleIdOption)
+                    .build()
+
+                // Get the credential result
+                val result = credentialManager.getCredential(context, request)
+                val credential = result.credential
+
+                // Check if the received credential is a valid Google ID Token
+                if (credential is CustomCredential && credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
+                    val googleIdTokenCredential =
+                        GoogleIdTokenCredential.createFrom(credential.data)
+                    val authCredential =
+                        GoogleAuthProvider.getCredential(googleIdTokenCredential.idToken, null)
+                    val authResult = firebaseAuth.signInWithCredential(authCredential).await()
+                    trySend(Result.success(authResult))
+                } else {
+                    throw RuntimeException("Received an invalid credential type")
+                }
+            } catch (e: GetCredentialCancellationException) {
+                trySend(Result.failure(Exception("Sign-in was canceled. Please try again.")))
+
+            } catch (e: Exception) {
+                trySend(Result.failure(e))
+            }
+            awaitClose { }
+        }
     }
 }
