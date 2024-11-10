@@ -1,18 +1,23 @@
 package com.example.firebaseauthexample
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.credentials.GetCredentialRequest
+import androidx.credentials.GetPasswordOption
+import androidx.credentials.GetPublicKeyCredentialOption
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.ktx.auth
 
-class EmailPasswordActivity : AppCompatActivity() {
+class EmailPasswordActivity() : AppCompatActivity() {
 
     //Declare an instance of FirebaseAuth
     private lateinit var auth: FirebaseAuth
@@ -43,6 +48,7 @@ class EmailPasswordActivity : AppCompatActivity() {
             val password = passwordField.text.toString()
             signIn(email, password)
         }
+
     }
 
     //When initializing your Activity, check to see if the user is currently signed in.
@@ -68,22 +74,26 @@ class EmailPasswordActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
-                    updateUI(user)
+                    val loginInfoTextView = findViewById<TextView>(R.id.LoginInfo)
+                    loginInfoTextView.text = "User created! You can now login!"
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext,
-                        "Authentication failed.",
-                        Toast.LENGTH_SHORT,
-                    ).show()
+                    val errorMessage = task.exception?.message?.substringAfter("] ")?.replace("[", "")?.replace("]", "") ?: "Authentication failed."
+                    Toast.makeText(baseContext, errorMessage, Toast.LENGTH_SHORT).show()
+                    val loginInfoTextView = findViewById<TextView>(R.id.LoginInfo)
+                    loginInfoTextView.text = "User creation failed.\n\n $errorMessage"
                     updateUI(null)
                 }
             }
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        // Implement your update UI logic here
+        if (user != null) {
+            val intent = Intent(this, DisplayUserInfo::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     //Create a new signIn method which takes in an email address and password, validates them, and
@@ -94,16 +104,17 @@ class EmailPasswordActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
+                    val loginInfoTextView = findViewById<TextView>(R.id.LoginInfo)
+                    loginInfoTextView.text = "Sign in successful!"
                     val user = auth.currentUser
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext,
-                        "Authentication failed.",
-                        Toast.LENGTH_SHORT,
-                    ).show()
+                    val errorMessage = task.exception?.message?.substringAfter("] ") ?: "Authentication failed."
+                    Toast.makeText(baseContext, errorMessage, Toast.LENGTH_SHORT).show()
+                    val loginInfoTextView = findViewById<TextView>(R.id.LoginInfo)
+                    loginInfoTextView.text = "Sign In failed. \n\n $errorMessage"
                     updateUI(null)
                 }
             }

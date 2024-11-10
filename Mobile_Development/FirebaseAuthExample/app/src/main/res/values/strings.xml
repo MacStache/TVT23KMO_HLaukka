@@ -4,4 +4,9 @@
     <string name="password_hint">Password</string>
     <string name="register_button">Register</string>
     <string name="sign_in">Sign In</string>
+    <string name="MainScreenText">Please click the button to sign in or register!</string>
+    <string name="MainScreenButton">SignIn/Register</string>
+    <string name="log_out">Log out</string>
+    <string name="UserInfoText" />
+    <string name="please_sign_in_or_register">Please Sign In or Register!</string>
 </resources>

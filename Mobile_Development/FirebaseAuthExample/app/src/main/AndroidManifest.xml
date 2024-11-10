@@ -18,6 +18,8 @@
 
         <!-- Add EmailPasswordActivity to the manifest -->
         <activity android:name=".EmailPasswordActivity" />
+        <!-- Add DisplayUserInfo to the manifest -->
+        <activity android:name=".DisplayUserInfo" />
 
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
