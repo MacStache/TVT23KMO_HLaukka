@@ -64,6 +64,7 @@ export default function EmailPasswordScreen() {
   };
 
   const handleGoogleSignIn = async () => {
+    // Commented until google sign in works
     // promptAsync();
   };
 

@@ -36,4 +36,4 @@ yarn-error.*
 
 # Ignore Firebase config file
 FirebaseConfig.js
-
+GoogleSignInConfig.js
